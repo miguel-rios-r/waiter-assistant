@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <!--Import Google Icon Font-->
+  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="../assets/css/materialize.min.css"  media="screen,projection"/>
+
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Puchis | Mesero</title>
+</head>
+
+<body>
+
+
+<!-- Menú principal -->
+   <nav>
+      <div class="nav-wrapper red">
+        <a href="/" class="brand-logo center"><img src="../assets/images/logo.png" style="width: 110px"></a>
+  </nav>
+<!--/ Menú principal -->
+
+<!-- Botón Flotante -->
+  <div class="fixed-action-btn horizontal click-to-toggle">
+      <a class="waves-effect waves-light btn-floating btn-large red">
+        <i class="material-icons">menu</i>
+      </a>
+      <ul>
+
+        <li><a class="waves-effect waves-light btn-floating green"><i class="material-icons">check</i></a></li>
+        <li><a class="waves-effect waves-light btn-floating red" href=""><i class="material-icons">clear</i></a></li>
+      </ul>
+    </div>
+<!--/ Botón Flotante -->
+
+<div style="padding: 15px"></div>
+<section class="container">
+  <div class="row">
+    <div class="col m6">
+      <form>
+        <div class="input-field col s6">
+          <input value="Nombre cliente" id="username" type="text" class="validate">
+          <label for="nombre">Cliente</label>
+        </div>
+        <div class="input-field col s6">
+          <select class="validate">
+            <option id="mesa" value="Seleccione la mesa" disabled selected>Seleccione la mesa</option>
+            <option value="1">Mesa 1</option>
+            <option value="2">Mesa 2</option>
+            <option value="3">Mesa 3</option>
+          </select>
+        <label>Mesa</label>
+        </div>
+        <div class="input-field col s12">
+          <select multiple>
+            <option value="Seleccione las bebidas" disabled selected>Seleccione las bebidas</option>
+            <optgroup label="Café">
+              <option value="1">Americano</option>
+              <option value="2">Espresso</option>
+              <option value="3">Tradicional</option>
+              <option value="4">Chocolate caliente</option>
+              <option value="5">Capuccino</option>
+              <option value="6">Mocaccino</option>
+              <option value="7">Café Latto</option>
+              <option value="8">Café Irlandés</option>
+              <option value="9">Café Caramelo Macchiato</option>
+              <option value="10">Café Amaretto</option>
+              <option value="11">Frapuccino</option>
+            </optgroup>
+            <optgroup label="Bebidas">
+              <option value="12">Milk Shake</option>
+              <option value="13">Jugo de Naranja</option>
+              <option value="14">Jugo de Tomate de A.</option>
+              <option value="15">Jugo de Mora</option>
+              <option value="16">Jugo de la Casa</option>
+              <option value="17">Horchata</option>
+              <option value="18">Gaseosa</option>
+              <option value="19">Agua con Gas</option>
+              <option value="20">Agua sin Gas</option>
+            </optgroup>
+            <optgroup label="Vinos">
+              <option value="21">Copa de vino</option>
+              <option value="22">Botella de vino</option>
+              <option value="23">Copa de Sangría</option>
+              <option value="24">Jarra de sangría</option>
+              <option value="25">Calimotxo</option>
+            </optgroup>
+            <optgroup label="Cervezas">
+              <option value="26">Cerveza artesanal</option>
+              <option value="27">Cerveza Corona</option>
+              <option value="28">Cerveza Club</option>
+              <option value="29">Cerveza Red</option>
+              <option value="30">Michelada</option>
+            </optgroup>
+          </select>
+          <label>Bebidas</label>
+        </div>
+
+        <div class="input-field col s12">
+          <select multiple>
+            <option value="Seleccione las bebidas" disabled selected>Seleccione el plato</option>
+            <optgroup label="Tortas">
+              <option value="1">Torta mojada de chocolate</option>
+              <option value="2">Torta de Naranja</option>
+              <option value="3">Torta Tradicional</option>
+              <option value="4">Torta de Zanahoria y Nuez</option>
+              <option value="5">Torta Tres Leches</option>
+              <option value="6">Torta de Maqueño</option>
+            </optgroup>
+            <optgroup label="Postres">
+              <option value="7">Tarta de Manzana</option>
+              <option value="8">Crepe de Manzana</option>
+              <option value="9">Crepe de Fruros Rojos</option>
+              <option value="10">Crepe de Banana</option>
+              <option value="11">Waffle Clásico</option>
+              <option value="12">Capcake del día</option>
+              <option value="13">Tiramisú</option>
+              <option value="14">Agua con Gas</option>
+              <option value="15">Agua sin Gas</option>
+            </optgroup>
+            <optgroup label="Platos de Sal">
+              <option value="16">Tamal</option>
+              <option value="17">Humita</option>
+              <option value="18">Quimbolito</option>
+              <option value="19">Bolón de verde</option>
+              <option value="20">Tigrillo</option>
+              <option value="21">Sango</option>
+              <option value="22">Empanada Chilena</option>
+            </optgroup>
+            <optgroup label="Picaditas">
+              <option value="23">Picadita Puchisl</option>
+              <option value="27">Tablita Jamón y Queso</option>
+            </optgroup>
+            <optgroup label="Sánduches">
+              <option value="24">Sánduche Mixti</option>
+              <option value="25">Sánduche Puchis</option>
+              <option value="26">Sánduche de Pernil</option>
+            </optgroup>
+            <optgroup label="Bar">
+              <option value="27">Alitas BBQ</option>
+              <option value="28">Alitas Picantes</option>
+            </optgroup>
+          </select>
+          <label>Platos</label>
+        </div>
+
+        <div class="input-field col s12">
+          <textarea id="textarea1" class="materialize-textarea"></textarea>
+          <label for="textarea1">Observaciones</label>
+        </div>
+        <input class="btn waves-effect waves-light" type="submit" value="Enviar pedido">
+      </form>
+    </div>
+    <div class="col m6 s12">
+      <ul class="collection with-header">
+        <li class="collection-header"><h4>Pedidos</h4></li>
+      </ul>
+    </div>
+    <div class="col m6 s12">
+      <table class="table table-striped table-hover ">
+        <thead>
+          <tr>
+            <th>Mesa</th>
+            <th>Cliente</th>
+            <th>Pedidos</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr id="messages"></tr>
+        </tbody>
+      </table> 
+    </div>
+  </div>
+</section>
+
+  <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script type="text/javascript" src="../assets/js/materialize.min.js"></script>
+  <!-- Scripts -->
+      <script src="../socket.io/socket.io.js"></script>
+      <script src="../client.js"></script>
+      <script src="../assets/js/init.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!--Import Google Icon Font-->
+      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="assets/css/materialize.min.css"  media="screen,projection"/>
+      <link rel="stylesheet" href="assets/css/estilos.css">
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>Puchis | Inicio</title>
+</head>
+<body class="grey lighten-3">
+  <!-- Menú principal -->
+     <nav>
+        <div class="nav-wrapper red">
+          <a href="/" class="brand-logo center"><img src="../assets/images/logo.png" style="width: 110px"></a>
+    </nav>
+  <!--/ Menú principal -->
+  <div class="container">
+    <div class="center" style="margin-top: 5%;">
+      <h2 style="color: #666">Bienvenido!</h2>
+    </div>
+    <div class="row center" style="margin-top: 7%; margin-bottom: 10%">
+      <div class="col s12 m4" style="margin-top: 10px;">
+        <i class="medium material-icons">monetization_on</i><br>
+        <a class="waves-effect waves-light btn red" href="caja.html"><i class="material-icons right">chevron_right</i>Caja</a>
+      </div>
+      <div class="col s12 m4" style="margin-top: 10px;">
+        <i class="medium material-icons">room_service</i><br>
+        <a class="waves-effect waves-light btn red" href="mesero.html"><i class="material-icons right">chevron_right</i>Mesero</a>
+      </div>
+      <div class="col s12 m4" style="margin-top: 10px;margin-bottom: 10px;">
+        <i class="medium material-icons">restaurant</i><br>
+        <a class="waves-effect waves-light btn red" href="cocina.html"><i class="material-icons right">chevron_right</i>Cocina</a>
+      </div>
+    </div>
+  </div>
+
+  <footer class="page-footer red darken-1">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">Waiter assistant</h5>
+                <p class="grey-text text-lighten-4">Sistema automatizador del proceso de emisión, generación y entrega de pedidos, ideal para quienes ejercen el trabajo de camarero!</p>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h6 class="white-text">Más Información</h6>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="#!"><i class="material-icons tiny">phone_iphone</i> 099 999 9999</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!"><i class="material-icons tiny">mail</i> info@waiterassistant.com</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!"><i class="material-icons tiny">info</i> Acerca de</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!"><i class="material-icons tiny">link</i> Docs</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © 2017 Copyright
+            <a class="grey-text text-lighten-4 right" href="#!">waiterassistant.com</a>
+            </div>
+          </div>
+        </footer>
+        <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script type="text/javascript" src="../assets/js/materialize.min.js"></script>
+  <!-- Scripts -->
+      <script src="../socket.io/socket.io.js"></script>
+      <script src="../main.js"></script>
+      <script src="../assets/js/init.js"></script>
+</body>

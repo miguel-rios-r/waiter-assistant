@@ -1,0 +1,202 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+  <meta charset="UTF-8">
+  <!--Import Google Icon Font-->
+      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="assets/css/materialize.min.css"  media="screen,projection"/>
+      <link rel="stylesheet" href="assets/css/estilos.css">
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>Puchis | Mesero</title>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="main.js"></script>
+</head> 
+
+<body>  
+
+<!-- Menú principal -->
+   <nav>
+      <div class="nav-wrapper red">
+        <a href="/" class="brand-logo center"><img src="../assets/images/logo.png" style="width: 110px"></a>
+  </nav>
+<!--/ Menú principal -->
+
+<div style="padding: 15px"></div>
+
+<section class="container">
+  <div class="row">
+    <div class="col m6">
+      <form onsubmit="return addMessage(this)">
+        <div class="row">
+          <div class="col m6">
+            <input type="text" id="username" placeholder="Cliente" >
+          </div>
+          <div class="col m6">
+              <select id="mesa" class="validate">
+                <option value="Mesa" disabled selected>Seleccione la mesa</option>
+                <optgroup label="Mesa 1">
+                  <option value="M1 - P1">M1 - P1</option>
+                  <option value="M1 - P2">M1 - P2</option>
+                  <option value="M1 - P3">M1 - P3</option>
+                  <option value="M1 - P4">M1 - P4</option>
+                </optgroup>
+                <optgroup label="Mesa 2">
+                  <option value="M2 - P1">M2 - P1</option>
+                  <option value="M2 - P2">M2 - P2</option>
+                  <option value="M2 - P3">M2 - P3</option>
+                  <option value="M2 - P4">M2 - P4</option>
+                </optgroup>
+                <optgroup label="Mesa 3">
+                  <option value="M3 - P1">M3 - P1</option>
+                  <option value="M3 - P2">M3 - P2</option>
+                  <option value="M3 - P3">M3 - P3</option>
+                  <option value="M3 - P4">M3 - P4</option>
+                </optgroup>
+                <optgroup label="Mesa 4">
+                  <option value="M4 - P1">M4 - P1</option>
+                  <option value="M4 - P2">M4 - P2</option>
+                  <option value="M4 - P3">M4 - P3</option>
+                  <option value="M4 - P4">M4 - P4</option>
+                </optgroup>
+                <optgroup label="Mesa 5">
+                  <option value="M5 - P1">M5 - P1</option>
+                  <option value="M5 - P2">M5 - P2</option>
+                  <option value="M5 - P3">M5 - P3</option>
+                  <option value="M5 - P4">M5 - P4</option>
+                </optgroup>
+              </select>
+              <label>Mesa</label>
+          </div>
+          <div>
+            <div class="input-field col s12">
+              <select id="bebida">
+              <option value="Seleccione la bebida" disabled selected>Seleccione la bebida</option>
+                <optgroup label="Café">
+                  <option>Café Americano</option>
+                  <option>Café Espresso</option>
+                  <option>Café Tradicional</option>
+                  <option>Chocolate caliente</option>
+                  <option>Capuccino</option>
+                  <option>Mocaccino</option>
+                  <option>Café Latto</option>
+                  <option>Café Irlandés</option>
+                  <option value="9">Café Caramelo Macchiato</option>
+                  <option>Café Amaretto</option>
+                  <option>Frapuccino</option>
+                </optgroup>
+                <optgroup label="Bebidas">
+                  <option>Milk Shake</option>
+                  <option>Jugo de Naranja</option>
+                  <option>Jugo de Tomate de A.</option>
+                  <option>Jugo de Mora</option>
+                  <option>Jugo de la Casa</option>
+                  <option>Horchata</option>
+                  <option>Gaseosa</option>
+                  <option>Agua con Gas</option>
+                  <option>Agua sin Gas</option>
+                </optgroup>
+                <optgroup label="Vinos">
+                  <option>Copa de vino</option>
+                  <option>Botella de vino</option>
+                  <option>Copa de Sangría</option>
+                  <option>Jarra de sangría</option>
+                  <option>Calimotxo</option>
+                </optgroup>
+                <optgroup label="Cervezas">
+                  <option>Cerveza artesanal</option>
+                  <option>Cerveza Corona</option>
+                  <option>Cerveza Club</option>
+                  <option>Cerveza Red</option>
+                  <option>Michelada</option>
+                </optgroup>
+              </select>
+              <label>Bebidas</label>
+            </div>
+          </div>
+
+          <div class="input-field col s12">
+          <select id="plato">
+            <option value="Seleccione las bebidas" disabled selected>Seleccione el plato</option>
+            <optgroup label="Tortas">
+              <option>Torta mojada de chocolate</option>
+              <option>Torta de Naranja</option>
+              <option>Torta Tradicional</option>
+              <option>Torta de Zanahoria y Nuez</option>
+              <option>Torta Tres Leches</option>
+              <option>Torta de Maqueño</option>
+            </optgroup>
+            <optgroup label="Postres">
+              <option>Tarta de Manzana</option>
+              <option>Crepe de Manzana</option>
+              <option>Crepe de Fruros Rojos</option>
+              <option>Crepe de Banana</option>
+              <option>Waffle Clásico</option>
+              <option>Capcake del día</option>
+              <option>Tiramisú</option>
+              <option>Agua con Gas</option>
+              <option>Agua sin Gas</option>
+            </optgroup>
+            <optgroup label="Platos de Sal">
+              <option>Tamal</option>
+              <option>Humita</option>
+              <option>Quimbolito</option>
+              <option>Bolón de verde</option>
+              <option>Tigrillo</option>
+              <option>Sango</option>
+              <option>Empanada Chilena</option>
+            </optgroup>
+            <optgroup label="Picaditas">
+              <option>Picadita Puchisl</option>
+              <option>Tablita Jamón y Queso</option>
+            </optgroup>
+            <optgroup label="Sánduches">
+              <option>Sánduche Mixti</option>
+              <option>Sánduche Puchis</option>
+              <option>Sánduche de Pernil</option>
+            </optgroup>
+            <optgroup label="Bar">
+              <option>Alitas BBQ</option>
+              <option>Alitas Picantes</option>
+            </optgroup>
+          </select>
+          <label>Platos</label>
+        </div>
+        <div class="col m12">
+          <input class="btn waves-effect waves-light" type="submit" value="Gererar pedido" href="">
+        </div>        
+        </div>
+      </form>
+    </div>
+    <div class="col m6 s12">
+      <ul class="collection with-header">
+        <li class="collection-header"><h4>Pedidos</h4></li>
+      </ul>
+    </div>
+    <div class="col m6 s12">
+      <table class="table table-striped table-hover ">
+        <thead>
+          <tr>
+            <th>Mesa</th>
+            <th>Cliente</th>
+            <th>Bebida</th>
+            <th>Plato</th>
+          </tr>
+        </thead>
+        <tbody id="messages">
+          
+        </tbody>
+      </table> 
+    </div>
+  </div>
+</section>
+
+<!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script type="text/javascript" src="../assets/js/materialize.min.js"></script>
+      <script src="../assets/js/init.js"></script>
+</body>  
+</html>  
