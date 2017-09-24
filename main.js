@@ -29,7 +29,7 @@ io.on('connection', function(socket) {
   });
 });
 
-server.listen(5000, function() {  
+server.listen(https://waiter-assistant.herokuapp.com/, function() {  
   console.log("Servidor corriendo en http://localhost:5000");
 });
 
