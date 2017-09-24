@@ -1,4 +1,4 @@
-var socket = io.connect('https://waiterassistant.herokuapp.com/', { 'forceNew': true });
+var socket = io.connect('http://localhost:5000', { 'forceNew': true });
 
 socket.on('messages', function(data) {  
   console.log(data);
