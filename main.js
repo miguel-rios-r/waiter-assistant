@@ -29,7 +29,7 @@ io.on('connection', function(socket) {
   });
 });
 
-server.listen(8000, function() {  
-  console.log("Servidor corriendo en http://localhost:8000");
+server.listen(5000, function() {  
+  console.log("Servidor corriendo en http://localhost:5000");
 });
 
