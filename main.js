@@ -1,4 +1,3 @@
-var cool = require('cool-ascii-faces');
 var express = require('express');  
 var app = express();  
 var server = require('http').Server(app);  
@@ -6,10 +5,9 @@ var io = require('socket.io')(server);
 
 var messages = [{  
   id: 1,
-  bebida: "Bebida",
-  mesa: "mesa",
-  plato: "plato",
-  nombreCliente: "cliente"
+  nombre: "Cliente",
+  mesa: "0",
+  pedido: "0"
 }];
 
 app.use(express.static('public'));
@@ -32,4 +30,3 @@ io.on('connection', function(socket) {
 server.listen(5000, function() {  
   console.log("Servidor corriendo en http://localhost:5000");
 });
-
